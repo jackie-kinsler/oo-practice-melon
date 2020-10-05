@@ -52,13 +52,14 @@ def make_melon_types():
     all_melon_types.extend([muskmelon, casaba, crenshaw, yellow_watermelon])
     return all_melon_types
 
-# def print_pairing_info(melon_types):
-#     """Prints information about each melon type's pairings."""
+def print_pairing_info(melon_types):
+    """Prints information about each melon type's pairings."""
 
-#     for melon in melon_types:
-#         print(f"melon.name.capitalize()} pairs with")
-#         for item in melon.pairings:
-#             print(f"    -{item}")
+    for melon in melon_types:
+        print(f"{melon.name.capitalize()} pairs with")
+        for item in melon.pairings:
+            print(f"    -{item}")
+        print('\n')
 
 def make_melon_type_lookup(melon_types):
     """Takes a list of MelonTypes and returns a dictionary of melon type by code."""
