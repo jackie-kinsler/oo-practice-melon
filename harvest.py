@@ -22,10 +22,10 @@ class MelonType:
         """Add a food pairing to the instance's pairings list."""
 
         if isinstance(pairing, str):
-            self.pairings = self.pairings.append(pairing) 
+            self.pairings.append(pairing) 
         
         if isinstance(pairing, list):
-            self.pairings = self.pairings.extend(pairing)
+            self.pairings.extend(pairing)
 
     def update_code(self, new_code):
         """Replace the reporting code with the new_code."""
@@ -49,12 +49,16 @@ def make_melon_types():
     yellow_watermelon = MelonType('yw', 2013, 'yellow', False, True, 'yellow watermelon')
     yellow_watermelon.add_pairing('ice cream')
 
+    all_melon_types.extend([muskmelon, casaba, crenshaw, yellow_watermelon])
     return all_melon_types
 
-def print_pairing_info(melon_types):
-    """Prints information about each melon type's pairings."""
+# def print_pairing_info(melon_types):
+#     """Prints information about each melon type's pairings."""
 
-    # Fill in the rest
+#     for melon in melon_types:
+#         print(f"melon.name.capitalize()} pairs with")
+#         for item in melon.pairings:
+#             print(f"    -{item}")
 
 def make_melon_type_lookup(melon_types):
     """Takes a list of MelonTypes and returns a dictionary of melon type by code."""
@@ -82,4 +86,4 @@ def get_sellability_report(melons):
     # Fill in the rest 
 
 
-
+# TO RUN IN TERMINAL 
